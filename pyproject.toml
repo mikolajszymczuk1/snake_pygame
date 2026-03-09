@@ -1,0 +1,46 @@
+[project]
+name = "snake-pygame"
+version = "0.1.0"
+description = "A simple snake game implemented using Pygame."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pygame-ce>=2.5.7",
+]
+
+[tool.ruff]
+line-length = 88
+extend-exclude = [
+  ".venv",
+  "__pycache__",
+  "migrations",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors (PEP 8 style violations)
+    "W",   # pycodestyle warnings (style issues)
+    "F",   # pyflakes (logical errors, unused imports/variables)
+    "I",   # isort (import sorting and organization)
+    "N",   # pep8-naming (enforce naming conventions: snake_case, PascalCase)
+    "UP",  # pyupgrade (modernize code to newer Python syntax)
+    "B",   # flake8-bugbear (catch common bugs and anti-patterns)
+    "C4",  # flake8-comprehensions (optimize list/dict comprehensions)
+    "SIM", # flake8-simplify (simplify complex code patterns)
+    "TC",  # flake8-type-checking (optimize type hint imports)
+    "RUF", # Ruff-specific rules (custom linting rules)
+]
+fixable = ["ALL"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.5",
+    "ty>=0.0.21",
+]

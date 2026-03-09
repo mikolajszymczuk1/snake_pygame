@@ -1,0 +1,42 @@
+{
+  // ============================================
+  // FORMATTING
+  // ============================================
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "charliermarsh.ruff",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+
+  // ============================================
+  // RUFF
+  // ============================================
+  "ruff.enable": true,
+  "ruff.lint.enable": true,
+  "ruff.organizeImports": true,
+
+  // ============================================
+  // PYTHON INTERPRETER
+  // ============================================
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+
+  // ============================================
+  // TYPE CHECKING
+  // ============================================
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "standard",
+  "python.analysis.autoImportCompletions": true,
+
+  // ============================================
+  // EDITOR
+  // ============================================
+  "editor.rulers": [
+    88
+  ],
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+}
