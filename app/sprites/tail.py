@@ -1,5 +1,5 @@
 from app.sprites.game_object import GameObject
 
 
-class Apple(GameObject):
+class Tail(GameObject):
     pass

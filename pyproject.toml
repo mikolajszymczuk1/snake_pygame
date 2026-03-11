@@ -8,6 +8,15 @@ dependencies = [
     "pygame-ce>=2.5.7",
 ]
 
+[tool.poe.tasks]
+dev = ["ci", "start_dev"]
+start_dev = "uv run python -m app.main"
+check = "ty check"
+format = "ruff format ."
+lint = "ruff check ."
+lint-fix = "ruff check --fix ."
+ci = ["check", "lint"]
+
 [tool.ruff]
 line-length = 88
 extend-exclude = [
@@ -41,6 +50,7 @@ indent-style = "space"
 
 [dependency-groups]
 dev = [
+    "poethepoet>=0.42.1",
     "ruff>=0.15.5",
     "ty>=0.0.21",
 ]
